@@ -1,0 +1,24 @@
+{
+  "name": "lessonplanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiayuliu27/lesson-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiayuliu27/lesson-planner/issues"
+  },
+  "homepage": "https://github.com/jiayuliu27/lesson-planner#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0"
+  }
+}
