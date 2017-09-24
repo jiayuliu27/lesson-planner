@@ -1,10 +1,19 @@
 {
   "name": "lessonplanner",
   "version": "1.0.0",
-  "description": "",
+  "description": "lesson planner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack",
+      "build-watch": "npm run build -- -w",
+      "build-dev": "cross-env NODE_ENV=development npm run build-watch",
+      "start": "node server/start.js",
+      "start-watch": "nodemon server/start.js --watch server --watch db --watch index.js --watch package.json",
+      "start-dev": "cross-env NODE_ENV=development npm run start-watch",
+      "seed": "node db/seed.js",
+      "lint": "esq . --ignore-path .gitignore --ext '.js,.jsx'",
+      "lint-watch": "npm run lint -- -w"
   },
   "repository": {
     "type": "git",
@@ -17,8 +26,41 @@
   },
   "homepage": "https://github.com/jiayuliu27/lesson-planner#readme",
   "dependencies": {
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
-    "react-router": "^4.2.0"
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "sequelize": "^4.10.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.0.5",
+    "dateformat": "^3.0.2",
+    "eslint": "^4.7.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-watch": "^3.1.2",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0",
+    "volleyball": "^1.4.1",
+    "webpack": "^3.6.0",
+    "webpack-livereload-plugin": "^0.11.0"
   }
 }
